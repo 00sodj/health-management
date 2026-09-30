@@ -1,0 +1,20 @@
+{
+  "name": "健康管理 health-managem",
+  "short_name": "健康管理",
+  "description": "记录饮食、运动、睡眠，拍照识别食物热量并给出健康建议。",
+  "lang": "zh-CN",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f7fa",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

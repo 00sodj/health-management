@@ -1,0 +1,35 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+
+# 打包产物
+release
+release-*
+dist-desktop
+dist-*.gnie
+*.genie
+
+# Android
+android/app/build
+android/build
+android/.gradle
+android/local.properties
+android/app/src/main/assets/public
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+*.keystore
+*.jks
+android/app/release
+android/.idea
+android/captures
+*.iml
+.gradle
+
+# 本机工具数据（含会话记忆，不入库）
+.workbuddy/
+
+# Vite 临时文件
+vite.config.ts.timestamp-*.mjs

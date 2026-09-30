@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-gray-50 text-foreground antialiased;
+    overscroll-behavior-y: none;
+  }
+}
+
+@layer components {
+  /* 移动端底部弹层（仿 shadcn Dialog 的 sheet 风格） */
+  .sheet {
+    @apply fixed inset-0 z-50 flex items-end justify-center;
+  }
+  .sheet-overlay {
+    @apply fixed inset-0 bg-black/40;
+  }
+  .sheet-panel {
+    @apply relative w-full max-w-md rounded-t-2xl bg-white p-4 pb-6 shadow-xl;
+    max-height: 88vh;
+    overflow-y: auto;
+    animation: sheet-up 0.22s ease-out;
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   深色模式主题层（class 策略；放在 layer 之外以获得更高优先级）
+   ========================================================= */
+.dark {
+  color-scheme: dark;
+}
+.dark body {
+  background-color: #0b1220;
+  color: #e5e7eb;
+}
+
+/* 表面 */
+.dark .bg-white {
+  background-color: #111827;
+}
+.dark .bg-white\/95 {
+  background-color: rgba(17, 24, 39, 0.95);
+}
+.dark .bg-gray-50 {
+  background-color: #0b1220;
+}
+.dark .bg-gray-50\/95 {
+  background-color: rgba(11, 18, 32, 0.95);
+}
+.dark .bg-gray-100 {
+  background-color: #1f2937;
+}
+.dark .bg-gray-200 {
+  background-color: #374151;
+}
+/* 底部轻提示（撤销）用的深色底，暗色下提亮一点以保证对比 */
+.dark .bg-gray-900 {
+  background-color: #374151;
+}
+.dark .sheet-overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+.dark .sheet-panel {
+  background-color: #111827;
+}
+
+/* 浅色强调底 → 深色强调底 */
+.dark .bg-blue-50 {
+  background-color: #172554;
+}
+.dark .bg-blue-100 {
+  background-color: #1e3a8a;
+}
+.dark .bg-green-50 {
+  background-color: #052e16;
+}
+.dark .bg-green-100 {
+  background-color: #14532d;
+}
+.dark .bg-amber-100 {
+  background-color: #451a03;
+}
+.dark .bg-orange-50 {
+  background-color: #431407;
+}
+.dark .bg-red-50 {
+  background-color: #450a0a;
+}
+.dark .bg-purple-50 {
+  background-color: #2e1065;
+}
+
+/* 文字 */
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700 {
+  color: #f3f4f6;
+}
+.dark .text-gray-600,
+.dark .text-gray-500 {
+  color: #d1d5db;
+}
+.dark .text-gray-400 {
+  color: #94a3b8;
+}
+.dark .text-gray-200 {
+  color: #475569;
+}
+.dark .text-blue-700 {
+  color: #93c5fd;
+}
+.dark .text-green-700 {
+  color: #86efac;
+}
+.dark .text-amber-700 {
+  color: #fcd34d;
+}
+.dark .text-purple-700 {
+  color: #d8b4fe;
+}
+.dark .text-blue-600 {
+  color: #60a5fa;
+}
+.dark .text-green-600 {
+  color: #4ade80;
+}
+.dark .text-red-600,
+.dark .text-red-400 {
+  color: #f87171;
+}
+.dark .text-amber-600 {
+  color: #fbbf24;
+}
+.dark .text-orange-600 {
+  color: #fb923c;
+}
+.dark .text-purple-600 {
+  color: #c084fc;
+}
+
+/* 边框 */
+.dark .border-gray-100,
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+.dark .border-blue-100 {
+  border-color: #1e3a8a;
+}
+.dark .border-blue-300 {
+  border-color: #3b82f6;
+}

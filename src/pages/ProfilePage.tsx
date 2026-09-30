@@ -129,7 +129,7 @@ export function ProfilePage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `health-managem-${todayStr()}.json`
+    a.download = `health-management-${todayStr()}.json`
     a.click()
     URL.revokeObjectURL(url)
     setMsg('已导出 JSON 文件')
@@ -403,7 +403,7 @@ export function ProfilePage() {
         {msg && <p className="mt-2 text-center text-xs text-blue-500">{msg}</p>}
       </Card>
 
-      <p className="px-1 text-center text-[11px] text-gray-400">health-managem · 所有数据仅保存在本机浏览器</p>
+      <p className="px-1 text-center text-[11px] text-gray-400">health-management · 所有数据仅保存在本机浏览器</p>
     </div>
   )
 }

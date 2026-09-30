@@ -1,10 +1,10 @@
 {
-  "name": "health-managem",
+  "name": "health-management",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "main": "electron/main.cjs",
-  "author": "health-managem",
+  "author": "health-management",
   "description": "健康管理 Web 应用 - 记录饮食/运动/睡眠，自动换算大卡并给出建议",
   "scripts": {
     "dev": "vite",

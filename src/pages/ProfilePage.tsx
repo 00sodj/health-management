@@ -273,16 +273,25 @@ export function ProfilePage() {
           </div>
           <div className="grid grid-cols-3 gap-2">
             <div>
-              <label className="mb-1 block text-xs text-gray-500">蛋白质（g）</label>
-              <Input type="number" min={0} value={profile.proteinTarget} onChange={(e) => update({ proteinTarget: Number(e.target.value) })} />
+              <label className="mb-1 block text-center text-xs text-gray-500">蛋白质</label>
+              <div className="flex items-center gap-1">
+                <Input type="number" min={0} value={profile.proteinTarget} onChange={(e) => update({ proteinTarget: Number(e.target.value) })} />
+                <span className="text-xs text-gray-400">g</span>
+              </div>
             </div>
             <div>
-              <label className="mb-1 block text-xs text-gray-500">碳水（g）</label>
-              <Input type="number" min={0} value={profile.carbsTarget} onChange={(e) => update({ carbsTarget: Number(e.target.value) })} />
+              <label className="mb-1 block text-center text-xs text-gray-500">碳水</label>
+              <div className="flex items-center gap-1">
+                <Input type="number" min={0} value={profile.carbsTarget} onChange={(e) => update({ carbsTarget: Number(e.target.value) })} />
+                <span className="text-xs text-gray-400">g</span>
+              </div>
             </div>
             <div>
-              <label className="mb-1 block text-xs text-gray-500">脂肪（g）</label>
-              <Input type="number" min={0} value={profile.fatTarget} onChange={(e) => update({ fatTarget: Number(e.target.value) })} />
+              <label className="mb-1 block text-center text-xs text-gray-500">脂肪</label>
+              <div className="flex items-center gap-1">
+                <Input type="number" min={0} value={profile.fatTarget} onChange={(e) => update({ fatTarget: Number(e.target.value) })} />
+                <span className="text-xs text-gray-400">g</span>
+              </div>
             </div>
           </div>
           <div>
